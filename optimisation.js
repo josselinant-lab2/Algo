@@ -80,11 +80,6 @@ function runTestSuite() {
         console.log(`Average time for ${algorithm.name}: ${averageTime.toFixed(4)} ms`);
     });
 
-    const fastest = results.reduce((prev, curr) => (prev.averageTime < curr.averageTime ? prev : curr));
-    const slowest = results.reduce((prev, curr) => (prev.averageTime > curr.averageTime ? prev : curr));
-
-    console.log(`Fastest algorithm: ${fastest.name}`);
-    console.log(`Slowest algorithm: ${slowest.name}`);
 }
 
 runTestSuite();
